@@ -19,6 +19,17 @@ const APIUtil = {
         user_id: id
       }
     });
+  },
+
+  searchUsers: (queryVal) => {
+    return $.ajax({
+      method: "GET",
+      url: `/users/search/`,
+      dataType: "JSON",
+      data: {
+        query: queryVal
+      }
+    });
   }
 };
 
